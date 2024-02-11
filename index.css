@@ -1,0 +1,39 @@
+/* header css */
+.header{
+    display: flex;
+    justify-content: space-around;
+    border: 5px solid black;
+}
+.logo{
+    width: 20%;
+}
+.nav-items>ul{
+    display: flex;
+    font-size: 24px;
+    list-style-type:none
+}
+.nav-items>ul>li{
+    margin: 10px;
+    padding: 10px;
+}
+
+/* body and .restraurant-card css */
+.restraurant-card{
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.res-card{
+    width: 276px;
+    height: 400px;
+    margin: 10px 10px;
+    background-color:  #f0f0f0;
+    
+}
+.res-card:hover{
+    border: 2px solid #0f0f0f;
+    cursor: pointer;
+}
+.res-logo{
+width: 100%;
+}
