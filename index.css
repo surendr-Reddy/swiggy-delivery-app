@@ -24,8 +24,7 @@
 }
 
 .res-card{
-    width: 276px;
-    height: 400px;
+    width: 300px;
     margin: 10px 10px;
     background-color:  #f0f0f0;
     
@@ -36,4 +35,5 @@
 }
 .res-logo{
 width: 100%;
+height: 200px
 }
