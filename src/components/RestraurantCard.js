@@ -2,7 +2,6 @@ import { CDN_URL } from "./utils/constants";
 
 //props:{resData:info{here is the data}}
  const RestraurantCard = (props) => {
-    console.log(props);
     const { name, avgRating, deliveryTime, cuisines, cloudinaryImageId } =
       props.resData.info;
   
