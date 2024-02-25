@@ -12,9 +12,9 @@ const [ogin_btn, setogin_btn]=useState('login');
         </div>
         <div className="nav-items">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>contact Us</li>
+            <li> <a href="/">Home</a></li>
+            <li> <a href="/about">About</a></li>
+            <li><a href="/contact">contact Us</a></li>
             <li>Cart</li>
             <button className="login-btn" onClick={()=>{ogin_btn==="login"?setogin_btn("logout"):setogin_btn("login")}}>{ogin_btn}</button>
           </ul>
