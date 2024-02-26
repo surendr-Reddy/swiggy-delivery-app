@@ -1,6 +1,7 @@
 import RestraurantCard from "./RestraurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   //Api data state variable
@@ -40,10 +41,12 @@ const Body = () => {
   };
 
   const filterdata = () => {
-    //try to if the top rated restorent click the search need to do only for that
+    // Try to filter if the top-rated restaurant is clicked, search only for that
+// Implementation is below
     const filterdata = rescared.filter((data) => {
       return data.info.avgRating > 4.2;
     });
+    setRescard(filterdata);
     setSearchApiData(filterdata);
   };
 
@@ -84,7 +87,8 @@ const Body = () => {
       </div>
       <div className="restraurant-card">
         {searchApiData.map((resCrad) => {
-          return <RestraurantCard key={resCrad.info.id} resData={resCrad} />;
+          return(
+          <div key={resCrad.info.id}><Link  to={"/restraurant/"+resCrad.info.id} > <RestraurantCard  resData={resCrad} /></Link></div>);
         })}
       </div>
     </div>
