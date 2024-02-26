@@ -1,10 +1,16 @@
-import Header from "./Header";
-const About = () => {
+// const About = () => {
+//   return (
+//     <div className="about">
+//       <h>welcome to about</h>
+//     </div>
+//   );
+// };
+//
+function About (){
   return (
-    <div className="about">
-      <Header/>
-      <h>welcome to about</h>
-    </div>
-  );
-};
+       <div className="about">
+        <h>welcome to dfsdfabout</h>
+        </div>
+       );
+}
 export default About;

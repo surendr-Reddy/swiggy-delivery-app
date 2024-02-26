@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "/images/logo.jpg"
-
+import { Link } from "react-router-dom";
 
 const Header = () => {
 const [ogin_btn, setogin_btn]=useState('login');
@@ -12,9 +12,9 @@ const [ogin_btn, setogin_btn]=useState('login');
         </div>
         <div className="nav-items">
           <ul>
-            <li> <a href="/">Home</a></li>
-            <li> <a href="/about">About</a></li>
-            <li><a href="/contact">contact Us</a></li>
+            <li> <Link to="/">Home</Link></li>
+            <li> <Link to="/about">About</Link></li>
+            <li><Link to="/contact">contact Us</Link></li> 
             <li>Cart</li>
             <button className="login-btn" onClick={()=>{ogin_btn==="login"?setogin_btn("logout"):setogin_btn("login")}}>{ogin_btn}</button>
           </ul>

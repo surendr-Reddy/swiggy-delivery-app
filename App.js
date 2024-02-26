@@ -5,20 +5,28 @@ import Body from "./src/components/Body";
 import About from "./src/components/About";
 import Contact from "./src/components/Contact";
 import Error from "./src/components/Error";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <>
       <Header />
-      <Body />
+     <Outlet/>
     </>
   );
 };
 const appRouter = createBrowserRouter([
-  { path: "/", element: <App />, errorElement: <Error /> },
-  { path: "/about", element: <About />, errorElement: <Error name="hi" /> }, // this error element only display when the error in the about page for any other url mismatch the mmain error element will display
-  { path: "/contact", element: <Contact /> },
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      { path: "/", element: <Body /> },
+      { path: "/about", element: <About />  },
+      { path: "/contact", element: <Contact /> }
+
+    ],
+  },
 ]);
 
 const root = ReactDom.createRoot(document.getElementById("root"));
